@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I&M Eazzy Banking</title>
+  <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body>
+<div class="container">
+      <div class="forms-container">
+        <div class="form-control signup-form">
+          <form method="POST" id="registerForm" onsubmit="return validateForm();">
+           
+            <h3>CREATE AN ACCOUNT </h3>
+            <input id="uName" type="text" placeholder="Username" required />
+            <input id="uEmail" type="email" placeholder="Email" oninput="emailExist(this)" required  />
+            <input id="contact" type="text" placeholder="Contact No" required />
+            <input id="uPassword" type="password" placeholder="Password" pattern=".{0}|.{6,}" required />
+            
+            <button type="submit" id="submit">Signup</button>
+          </form>
+      
+        </div>
+        <div class="form-control signin-form">
+          <form method="post" id="logIn" onsubmit="return loginUser();" >
+          
+            <h2>Signin</h2>
+            <input type="text" id="uemailId" placeholder="Username" required />
+            <input type="password" id="ePassword" placeholder="Password" required />
+            <button value="signin" id="login">Signin</button>
+          </form>
+     
+        </div>
+      </div>
+      <div class="intros-container">
+        <div class="intro-control signin-intro">
+          <div class="intro-control__inner">
+            <img src="images/bank.png" class="logo">
+            <h1>I&M Eazzy Banking</h1>
+          
+            <p>
+              Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and enjoyable time away.
+            </p>
+            <button id="signup-btn">No account yet? Signup.</button>
+          </div>
+        </div>
+        <div class="intro-control signup-intro">
+          <div class="intro-control__inner">
+            <img src="images/bank.png" class="logo">
+            <h1>I&M Eazzy Banking</h1>
+
+            <p>
+              We are so excited to have you here.If you haven't already, create an account to get access to exclusive offers, rewards, and discounts.
+            </p>
+            <button id="signin-btn">Already have an account? Signin.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script  src="js/app.js"></script>
+</body>
+</html>
